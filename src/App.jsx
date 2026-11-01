@@ -96,9 +96,7 @@ function Hero({ os }) {
             you blink in, pop BKB, your Midas comes off cooldown, night falls.
           </motion.p>
           <motion.div className="hero-ctas" variants={fadeUp} custom={3}>
-            <a className="btn btn-gold btn-lg" href={main ? asset(main.file) : "#download"}>
-              ⇩ {main ? `Download for ${main.os === "windows" ? "Windows" : "Mac"}` : "Download"}
-            </a>
+            <a className="btn btn-gold btn-lg" href="#download">Downloads coming soon</a>
             <a className="btn btn-lg" href="#demo">▶ Try it here</a>
           </motion.div>
           <motion.p className="fine" variants={fadeUp} custom={4}>
@@ -442,17 +440,16 @@ function Squad() {
 function Download({ os }) {
   return (
     <Section id="download" eyebrow="Download" title="Get Soundbo"
-      lead="Free and open source. Start it, and it opens in your browser and sets up Dota for you. Restart Dota if it was running.">
+      lead="Downloads are coming soon. Free and open source. Start it, and it opens in your browser and sets up Dota for you. Restart Dota if it was running.">
       <motion.div className="downloads" initial="hidden" whileInView="show" viewport={{ once: true }}>
         {DOWNLOADS.map((d, i) => (
-          <motion.a key={d.os} href={asset(d.file)} className={`download ${d.os === os ? "mine" : ""}`} variants={fadeUp} custom={i}
-            whileHover={{ y: -6 }} whileTap={{ scale: 0.97 }}>
+          <motion.div key={d.os} className={`download ${d.os === os ? "mine" : ""}`} variants={fadeUp} custom={i}>
             {d.os === os && <span className="badge">Your computer</span>}
             <span className="dl-icon">{d.icon}</span>
             <b>{d.label}</b>
             <small>{d.sub}</small>
-            <span className="dl-file">{d.file}</span>
-          </motion.a>
+            <span className="dl-file">Coming soon</span>
+          </motion.div>
         ))}
       </motion.div>
       <div className="notes">
