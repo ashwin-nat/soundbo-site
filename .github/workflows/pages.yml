@@ -1,4 +1,4 @@
-# Builds this Vite + React site and publishes it to https://ashwin-nat.github.io/rule-forge-site/.
+# Builds this Vite + React site and publishes it to https://ashwin-nat.github.io/soundbo-site/.
 # One-time setup: repo Settings → Pages → Source: "GitHub Actions".
 name: Website
 

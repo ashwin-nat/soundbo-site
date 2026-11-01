@@ -45,7 +45,7 @@ function Nav() {
   const bg = useTransform(scrollY, [0, 120], ["rgba(9,11,15,0)", "rgba(9,11,15,0.85)"]);
   return (
     <motion.nav className="nav" style={{ backgroundColor: bg }}>
-      <a className="brand" href="#top"><Diamond size={22} /> Rule Forge</a>
+      <a className="brand" href="#top"><Diamond size={22} /> Soundbo</a>
       <div className="nav-links">
         <a href="#demo">Demo</a>
         <a href="#features">Features</a>
@@ -92,7 +92,7 @@ function Hero({ os }) {
           <motion.div className="eyebrow" variants={fadeUp}>For Dota 2 · Free · Windows & Mac</motion.div>
           <motion.h1 variants={fadeUp} custom={1}>Your game.<br /><span className="gold">Your sounds.</span><br />Your lights.</motion.h1>
           <motion.p className="lead" variants={fadeUp} custom={2}>
-            Rule Forge plays the sound you picked and changes your room lights the moment something happens in your match:
+            Soundbo plays the sound you picked and changes your room lights the moment something happens in your match:
             you blink in, pop BKB, your Midas comes off cooldown, night falls.
           </motion.p>
           <motion.div className="hero-ctas" variants={fadeUp} custom={3}>
@@ -240,7 +240,7 @@ function Demo() {
           </AnimatePresence>
         </div>
         <div className="demo-feed">
-          <div className="hud-label">Rule Forge log</div>
+          <div className="hud-label">Soundbo log</div>
           <ul>
             <AnimatePresence initial={false}>
               {feed.length === 0 && <motion.li key="empty" className="feed-empty" exit={{ opacity: 0 }}>Waiting for something to happen…</motion.li>}
@@ -353,7 +353,7 @@ function Soundboard() {
 const FEATURES = [
   { icon: "🎯", title: "Every item, every hero", text: "Pick from a shop-style item grid or a hero's abilities. Trigger on used, ready, bought or lost, or on day and night." },
   { icon: "💡", title: "Smart lights", text: "TP-Link Tapo and Tuya / Smart Life bulbs change colour with the game: gold for BKB, blue at night, back to normal after." },
-  { icon: "🔊", title: "Sounds that never stack", text: "Set a volume per sound. Rule Forge never plays two sounds on top of each other for the same moment." },
+  { icon: "🔊", title: "Sounds that never stack", text: "Set a volume per sound. Soundbo never plays two sounds on top of each other for the same moment." },
   { icon: "🧩", title: "Browser editor", text: "Point, click, preview, save. Changes apply instantly, even mid-match, with no restart." },
   { icon: "🤝", title: "Share with your squad", text: "One link gives your friends all your sounds, and it keeps updating. Nothing for them to set up." },
   { icon: "🔌", title: "Webhooks", text: "Trigger anything else: a stream overlay, a Discord bot, your own smart-home setup." },
@@ -399,7 +399,7 @@ function Squad() {
   const listeners = ["🧙", "🏹", "🪓", "🐉"];
   return (
     <Section id="squad" eyebrow="Squad sharing" title="One person adds the sounds. Everyone hears them."
-      lead="Admins keep a shared Google Drive folder. Rule Forge turns it into a library link. Friends paste that link once and stay up to date.">
+      lead="Admins keep a shared Google Drive folder. Soundbo turns it into a library link. Friends paste that link once and stay up to date.">
       <div className="squad">
         <svg className="squad-lines" viewBox="0 0 600 260" preserveAspectRatio="none" aria-hidden>
           {[60, 200].map((y) => <path key={y} d={`M110 ${y} C 200 ${y}, 220 130, 290 130`} />)}
@@ -427,7 +427,7 @@ function Squad() {
       <motion.div className="steps-3" initial="hidden" whileInView="show" viewport={{ once: true }}>
         {[
           ["1", "Invite", "In Friends, click Invite friends and copy the message."],
-          ["2", "Paste", "Your friend pastes the link into Rule Forge and presses Join."],
+          ["2", "Paste", "Your friend pastes the link into Soundbo and presses Join."],
           ["3", "Play", "Your sounds play in their games and update every 30 minutes."],
         ].map(([n, t, d], i) => (
           <motion.div key={n} className="step" variants={fadeUp} custom={i}><span className="step-n">{n}</span><b>{t}</b><p>{d}</p></motion.div>
@@ -441,7 +441,7 @@ function Squad() {
 
 function Download({ os }) {
   return (
-    <Section id="download" eyebrow="Download" title="Get Rule Forge"
+    <Section id="download" eyebrow="Download" title="Get Soundbo"
       lead="Free and open source. Start it, and it opens in your browser and sets up Dota for you. Restart Dota if it was running.">
       <motion.div className="downloads" initial="hidden" whileInView="show" viewport={{ once: true }}>
         {DOWNLOADS.map((d, i) => (
@@ -463,7 +463,7 @@ function Download({ os }) {
         </details>
         <details>
           <summary>First launch on Windows</summary>
-          <p>If SmartScreen warns about an unknown app, click <b>More info → Run anyway</b>. Rule Forge then shows up as a ◆ in the system tray. Click it to open the editor.</p>
+          <p>If SmartScreen warns about an unknown app, click <b>More info → Run anyway</b>. Soundbo then shows up as a ◆ in the system tray. Click it to open the editor.</p>
         </details>
         <details>
           <summary>Build from source</summary>
@@ -498,7 +498,7 @@ export default function App() {
         <Download os={os} />
       </main>
       <footer className="footer">
-        <div className="brand"><Diamond size={18} /> Rule Forge</div>
+        <div className="brand"><Diamond size={18} /> Soundbo</div>
         <div className="footer-links">
           <a href={GITHUB}>GitHub</a>
           <a href={`${GITHUB}/releases`}>All releases</a>
