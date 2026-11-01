@@ -462,10 +462,6 @@ function Download({ os }) {
           <summary>First launch on Windows</summary>
           <p>If SmartScreen warns about an unknown app, click <b>More info → Run anyway</b>. Soundbo then shows up as a ◆ in the system tray. Click it to open the editor.</p>
         </details>
-        <details>
-          <summary>Build from source</summary>
-          <pre>{`git clone ${GITHUB}.git\ncd dota2-integrations\nuv sync\nuv run python -m src.main`}</pre>
-        </details>
       </div>
     </Section>
   );
